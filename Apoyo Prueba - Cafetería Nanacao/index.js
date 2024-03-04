@@ -64,7 +64,7 @@ app.delete("/cafes/:id", (req, res) => {
             res.status(404).send({ message: "No se encontró ningún cafe con ese id" })
         }
 
-    } else res.status(400).send({ message: "No recibió ningún token en las cabeceras" })
+    } else res.status(404).send({ message: "No recibió ningún token en las cabeceras" })
 })
 
 app.use("*", (req, res) => {
